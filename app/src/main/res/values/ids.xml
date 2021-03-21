@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="txtUmur" type="id" />
+    <item name="txtAlamat" type="id" />
+    <item name="txtLahir" type="id" />
+</resources>
