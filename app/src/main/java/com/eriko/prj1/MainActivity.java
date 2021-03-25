@@ -3,34 +3,45 @@ package com.eriko.prj1;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import java.text.BreakIterator;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView txtNama;
-    TextView txtUmur;
-    TextView txtAlamat;
-    TextView txtLahir;
-
+    TextView txtTampil, txtJudul;
+    EditText edtNpm, edtNama, edtAlamat, edtUmur, edtTelepon;
+    Button btnSubmit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        txtNama = (TextView) findViewById(R.id.txtNama);
-        txtNama.setText("Eriko Zakaria");
+        txtJudul = (TextView) findViewById(R.id.txtJudul);
+        txtJudul.setText("Biodata");
+        txtTampil = (TextView) findViewById(R.id.txtBiodata);
 
-        txtUmur = (TextView) findViewById(R.id.txtUmur);
-        txtUmur.setText("21 Tahun");
+        edtNpm = (EditText) findViewById(R.id.edtNpm);
+        edtNama = (EditText) findViewById(R.id.edtNama);
+        edtUmur = (EditText) findViewById(R.id.edtUmur);
+        edtAlamat = (EditText) findViewById(R.id.edtAlamat);
+        edtTelepon = (EditText) findViewById(R.id.edtTelepon);
+        btnSubmit = (Button) findViewById(R.id.btnSubmit);
 
-        txtAlamat = (TextView) findViewById(R.id.txtAlamat);
-        txtAlamat.setText("Jl. Kartini gg. Setia Negara No. 46");
-
-        txtLahir = (TextView) findViewById(R.id.txtLahir);
-        txtLahir.setText("07  Desember 1999");
-
+        btnSubmit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String strNpm = edtNpm.getText().toString();
+                String strNama = edtNama.getText().toString();
+                String strUmur = edtUmur.getText().toString();
+                String strAlamat = edtAlamat.getText().toString();
+                String strTelepon = edtTelepon.getText().toString();
+                txtTampil.setText(strNpm + "\n" + strNama + "\n" + strUmur+ "\n" + strAlamat + "\n" + strTelepon);
+            }
+        });
     }
 }

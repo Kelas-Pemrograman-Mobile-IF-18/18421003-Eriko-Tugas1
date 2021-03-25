@@ -9,24 +9,49 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/txtNama"
-        android:layout_width="144dp"
-        android:layout_height="wrap_content" />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtJudul" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="NPM"
+        android:id="@+id/edtNpm" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nama"
+        android:id="@+id/edtNama" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Umur"
+        android:id="@+id/edtUmur" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Alamat"
+        android:id="@+id/edtAlamat" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="No.Telepon"
+        android:id="@+id/edtTelepon" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:id="@+id/btnSubmit" />
 
     <TextView
-        android:id="@+id/txtUmur"
-        android:layout_width="144dp"
-        android:layout_height="wrap_content" />
-
-    <TextView
-        android:id="@+id/txtAlamat"
-        android:layout_width="144dp"
-        android:layout_height="wrap_content" />
-
-    <TextView
-        android:id="@+id/txtLahir"
-        android:layout_width="144dp"
-        android:layout_height="wrap_content" />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtBiodata" />
 
 
 </LinearLayout>
